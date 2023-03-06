@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>MikhayEeer&#39;s Blog</title>
   
+  <subtitle>tech otakus save the world</subtitle>
+  <link href="http://mikhayeeer.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
-  
-  <link href="http://example.com/"/>
+  <link href="http://mikhayeeer.github.io/"/>
   <updated>2023-03-06T01:42:06.895Z</updated>
-  <id>http://example.com/</id>
+  <id>http://mikhayeeer.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Danzel</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2023/03/06/hello-world/"/>
-    <id>http://example.com/2023/03/06/hello-world/</id>
+    <link href="http://mikhayeeer.github.io/2023/03/06/hello-world/"/>
+    <id>http://mikhayeeer.github.io/2023/03/06/hello-world/</id>
     <published>2023-03-06T01:42:06.895Z</published>
     <updated>2023-03-06T01:42:06.895Z</updated>
     
