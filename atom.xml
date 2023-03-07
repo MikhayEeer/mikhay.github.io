@@ -3,11 +3,11 @@
   <title>MikhayEeer&#39;s Blog</title>
   
   <subtitle>tech otakus save the world</subtitle>
-  <link href="http://mikhayeeer.github.io/atom.xml" rel="self"/>
+  <link href="http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/atom.xml" rel="self"/>
   
-  <link href="http://mikhayeeer.github.io/"/>
+  <link href="http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/"/>
   <updated>2023-03-06T03:33:40.065Z</updated>
-  <id>http://mikhayeeer.github.io/</id>
+  <id>http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/</id>
   
   <author>
     <name>Danzel</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Windows Command</title>
-    <link href="http://mikhayeeer.github.io/2023/03/06/Windows%E5%B8%B8%E7%94%A8CMD%E5%91%BD%E4%BB%A4/"/>
-    <id>http://mikhayeeer.github.io/2023/03/06/Windows%E5%B8%B8%E7%94%A8CMD%E5%91%BD%E4%BB%A4/</id>
+    <link href="http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/2023/03/06/Windows%E5%B8%B8%E7%94%A8CMD%E5%91%BD%E4%BB%A4/"/>
+    <id>http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/2023/03/06/Windows%E5%B8%B8%E7%94%A8CMD%E5%91%BD%E4%BB%A4/</id>
     <published>2023-03-06T03:24:14.000Z</published>
     <updated>2023-03-06T03:33:40.065Z</updated>
     
@@ -34,19 +34,19 @@
     
     
     
-    <category term="学习" scheme="http://mikhayeeer.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="CLI" scheme="http://mikhayeeer.github.io/categories/%E5%AD%A6%E4%B9%A0/CLI/"/>
+    <category term="CLI" scheme="http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/categories/%E5%AD%A6%E4%B9%A0/CLI/"/>
     
     
-    <category term="Windows" scheme="http://mikhayeeer.github.io/tags/Windows/"/>
+    <category term="Windows" scheme="http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/tags/Windows/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://mikhayeeer.github.io/2023/03/06/hello-world/"/>
-    <id>http://mikhayeeer.github.io/2023/03/06/hello-world/</id>
+    <link href="http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/2023/03/06/hello-world/"/>
+    <id>http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/2023/03/06/hello-world/</id>
     <published>2023-03-06T01:42:06.895Z</published>
     <updated>2023-03-06T01:42:06.895Z</updated>
     

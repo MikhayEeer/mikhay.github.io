@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/2023/03/06/hello-world/</url>
+    <url>/mikhayeeer.gitee.io/2023/03/06/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -20,7 +20,7 @@
   </entry>
   <entry>
     <title>Windows Command</title>
-    <url>/2023/03/06/Windows%E5%B8%B8%E7%94%A8CMD%E5%91%BD%E4%BB%A4/</url>
+    <url>/mikhayeeer.gitee.io/2023/03/06/Windows%E5%B8%B8%E7%94%A8CMD%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&amp;emsp; 个人在使用python和运行vs还有git的时候，感觉还是经常会用到cmd相关的命令，而课堂上只是学习过linux相关的命令，和cmd又有些不同，经常会出错，故此总结记录一下，以后也方便自己进行查找翻看。<br>适合与Linux命令结合学习，注意异同点[[Linux]]</p>
 <h1 id="0-启动"><a href="#0-启动" class="headerlink" title="0. 启动"></a>0. 启动</h1><p><kbd>Win</kbd> + <kbd>r</kbd> 进入运行，输入cmd<br>按下<kbd>Enter</kbd>进入cmd；<br>按下<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd>使用管理员权限启动</p>
 <h1 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1. 常用命令"></a>1. 常用命令</h1><h2 id="1-1-跳转硬盘"><a href="#1-1-跳转硬盘" class="headerlink" title="1.1 跳转硬盘"></a>1.1 跳转硬盘</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">d:   //跳转到D盘</span><br><span class="line">f:   //跳转到F盘</span><br><span class="line"></span><br><span class="line">cd /d d: //加参数/d跳转到D盘</span><br></pre></td></tr></table></figure>
