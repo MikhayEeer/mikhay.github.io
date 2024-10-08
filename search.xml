@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/mikhayeeer.gitee.io/2023/03/06/hello-world/</url>
+    <url>/mikhayeeer.github.io/2023/03/06/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -20,7 +20,7 @@
   </entry>
   <entry>
     <title>Windows Command</title>
-    <url>/mikhayeeer.gitee.io/2023/03/06/Windows%E5%B8%B8%E7%94%A8CMD%E5%91%BD%E4%BB%A4/</url>
+    <url>/mikhayeeer.github.io/2023/03/06/Windows%E5%B8%B8%E7%94%A8CMD%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&amp;emsp; 个人在使用python和运行vs还有git的时候，感觉还是经常会用到cmd相关的命令，而课堂上只是学习过linux相关的命令，和cmd又有些不同，经常会出错，故此总结记录一下，以后也方便自己进行查找翻看。<br>适合与Linux命令结合学习，注意异同点[[Linux]]</p>
 <h1 id="0-启动"><a href="#0-启动" class="headerlink" title="0. 启动"></a>0. 启动</h1><p><kbd>Win</kbd> + <kbd>r</kbd> 进入运行，输入cmd<br>按下<kbd>Enter</kbd>进入cmd；<br>按下<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd>使用管理员权限启动</p>
 <h1 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1. 常用命令"></a>1. 常用命令</h1><h2 id="1-1-跳转硬盘"><a href="#1-1-跳转硬盘" class="headerlink" title="1.1 跳转硬盘"></a>1.1 跳转硬盘</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">d:   //跳转到D盘</span><br><span class="line">f:   //跳转到F盘</span><br><span class="line"></span><br><span class="line">cd /d d: //加参数/d跳转到D盘</span><br></pre></td></tr></table></figure>
@@ -37,11 +37,276 @@
 <h1 id="2-Git命令的相关使用"><a href="#2-Git命令的相关使用" class="headerlink" title="2. Git命令的相关使用"></a>2. Git命令的相关使用</h1><h1 id="3-Python相关使用"><a href="#3-Python相关使用" class="headerlink" title="3. Python相关使用"></a>3. Python相关使用</h1><p>下载python的库命令pip [[Pip——Python的包管理工具]]</p>
 <h1 id="4-Visual-Studio的相关使用"><a href="#4-Visual-Studio的相关使用" class="headerlink" title="4. Visual Studio的相关使用"></a>4. Visual Studio的相关使用</h1><h1 id="5-Java相关使用"><a href="#5-Java相关使用" class="headerlink" title="5. Java相关使用"></a>5. Java相关使用</h1>]]></content>
       <categories>
-        <category>学习</category>
-        <category>CLI</category>
+        <category>Developers&#39;Tool</category>
       </categories>
       <tags>
         <tag>Windows</tag>
+        <tag>CLI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git常用整合宝典</title>
+    <url>/mikhayeeer.github.io/2024/10/08/Git%E5%B8%B8%E7%94%A8%E6%95%B4%E5%90%88%E5%AE%9D%E5%85%B8/</url>
+    <content><![CDATA[<p>@[TOC]</p>
+<h1 id="0-简单认识Git"><a href="#0-简单认识Git" class="headerlink" title="0. 简单认识Git"></a>0. 简单认识Git</h1><h2 id="0-1-起源"><a href="#0-1-起源" class="headerlink" title="0.1 起源"></a>0.1 起源</h2><p>  最初是由linux开发者linus用两周时间用c语言编写而成。github就是使用git系统对网站进行管理，github只支持git分布式系统，故名为github。</p>
+<h2 id="0-2-分布式"><a href="#0-2-分布式" class="headerlink" title="0.2 分布式"></a>0.2 分布式</h2><p>  svn和cvs也是版本控制系统，是集中式的，集中式的在每次写代码时都需要从服务器上拉取一份，如果服务器丢失，那么所有的都丢失，本机客户端仅仅保存当前版本信息。所有的回滚操作都需要服务器支持。<br>  而git是分布式的，每个电脑都是服务器，可以自由在本地回滚。</p>
+<h2 id="0-3-最高频操作"><a href="#0-3-最高频操作" class="headerlink" title="0.3 最高频操作"></a>0.3 最高频操作</h2><p>私以为最高频的应该就是远程仓库和本地仓库的拉取与推送了</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;This is description&quot;</span><br><span class="line">git push origin master</span><br><span class="line"></span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line">git status</span><br><span class="line">git log</span><br></pre></td></tr></table></figure>
+<h1 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h1><p>git 官网: <a href="https://git-scm.com/">https://git-scm.com</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git help</span><br></pre></td></tr></table></figure>
+<h2 id="1-1-安装"><a href="#1-1-安装" class="headerlink" title="1.1 安装"></a>1.1 安装</h2><p>Linux安装</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure>
+<p>windows<br><a href="https://git-scm.com/download/win">Git - Downloading Package (git-scm.com)</a></p>
+<h2 id="1-2-基本配置"><a href="#1-2-基本配置" class="headerlink" title="1.2 基本配置"></a>1.2 基本配置</h2><p>查看git信息</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git -V</span><br><span class="line">git version</span><br></pre></td></tr></table></figure>
+<p>配置config，设置自己的用户名和邮箱，这些是每次提交的时候都会用到的信息</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;User Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;UserEmail@Example.com&quot;</span></span><br><span class="line"><span class="comment"># --global表示配置全局，整个git环境</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查询git config的信息</span></span><br><span class="line">git config --list</span><br><span class="line">git config -l <span class="comment">#两种都行</span></span><br><span class="line">  <span class="comment"># 按 q 退出查看</span></span><br></pre></td></tr></table></figure>
+<p>取消配置</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config --global --unset user.name</span><br></pre></td></tr></table></figure>
+<p>配置git使用的代理（根据个人需求设置）</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy &quot;http://127.0.0.1:7890&quot;</span><br><span class="line">git config --global https.proxy &quot;http://127.0.0.1:7890&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="1-3-架构"><a href="#1-3-架构" class="headerlink" title="1.3 架构"></a>1.3 架构</h2><p>在git的过程中，主要分为两个大区</p>
+<blockquote>
+<p>工作区和版本库，版本库又分为暂存区和分支</p>
+</blockquote>
+<ul>
+<li><strong>版本库</strong>：存在于工作区中的一个隐藏目录<code>.git</code>，该目录不属于工作区，是git的版本库，是git管理的所有内容；</li>
+<li><strong>工作区</strong>：是你撰写代码的地方，修改完成后，通过add操作将工作区的修改放到暂存区；一般是最新的版本代码</li>
+<li><strong>暂存区</strong>：是版本库的一个临时区域，保存下一步将要提交的文件；</li>
+<li><strong>分支</strong>：版本库有很多分支，提交的文件就存储在分支中，例如master和main分支</li>
+<li><strong>仓库</strong>：所有提交都在这，包括历史版本</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Git</span><br><span class="line">|————————WorkSpace:工作区</span><br><span class="line">|————————Index/Stage:暂存区/缓存区</span><br><span class="line">|————————Repository:本地仓库/仓库区</span><br><span class="line">|————————Remote:远程仓库</span><br></pre></td></tr></table></figure>
+<h3 id="git"><a href="#git" class="headerlink" title=".git"></a>.git</h3><p>Index:缓存区，存在于.git中</p>
+<h1 id="2-仓库"><a href="#2-仓库" class="headerlink" title="2. 仓库"></a>2. 仓库</h1><p>一个仓库对应一个目录，该目录中的所有文件被git管理</p>
+<h2 id="2-1-新建仓库"><a href="#2-1-新建仓库" class="headerlink" title="2.1 新建仓库"></a>2.1 新建仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br><span class="line"><span class="comment"># 需要在空目录</span></span><br></pre></td></tr></table></figure>
+<p>执行<code>git init</code>操作的目录即为<strong>工作区</strong>，在操作之后，该目录下会有<code>.git</code>目录，是版本库<br>.git是git的配置文件目录，是隐藏文件夹，普通的ls命令无法查看</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span></span><br><span class="line"><span class="comment"># 用-lha参数来查看隐藏的目录</span></span><br><span class="line"><span class="built_in">ls</span> -lha</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>插播一句废话：<code>-lha</code>是命令<code>ls</code>的三个可选参数，分别代表显示详细信息、以便于人类可读的方式显示大小、显示所有文件（包括隐藏）</p>
+</blockquote>
+<h1 id="3-基本操作"><a href="#3-基本操作" class="headerlink" title="3. 基本操作"></a>3. 基本操作</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#查看仓库状态</span></span><br><span class="line">git status</span><br><span class="line"><span class="comment"># 能看到是否有改动，untracked未跟踪代表未提交</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#暂存文件，将工作区文件存入暂存区/缓存区</span></span><br><span class="line">git add .</span><br><span class="line">git add --all  <span class="comment"># 添加所有，基本同git add . ， 但是会记录删除操作</span></span><br><span class="line">git add filname.txt  <span class="comment"># 添加某文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#提交文件，将暂存区文件存入分支，形成一个版本</span></span><br><span class="line">git commit -m <span class="string">&quot;提交的描述信息&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除文件</span></span><br><span class="line">git <span class="built_in">rm</span> filename</span><br></pre></td></tr></table></figure>
+<p>push和pull操作会放到下文远程仓库中</p>
+<h2 id="3-2-日志"><a href="#3-2-日志" class="headerlink" title="3.2 日志"></a>3.2 日志</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看历史提交日志</span></span><br><span class="line">git log</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">log</span>的日志格式</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">commit &lt;<span class="built_in">hash</span> <span class="built_in">id</span>&gt; (HEAD -&gt; master)</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Author : 提交者(user.name)</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Date : 提交时间</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"> myBase add new file <span class="string">&quot;readme.md&quot;</span></span></span><br><span class="line"></span><br><span class="line">git log filename</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看某一文件的回滚版本</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看提交历史：  包括回滚操作</span></span><br><span class="line">git reflog</span><br><span class="line"></span><br><span class="line">git log --pretty=oneline #单行显示</span><br><span class="line"></span><br><span class="line">git log --help</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">会打开本地的<span class="built_in">log</span>命令选项文档</span></span><br></pre></td></tr></table></figure>
+<h3 id="日志帮助文档"><a href="#日志帮助文档" class="headerlink" title="日志帮助文档"></a>日志帮助文档</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">合并merge</span></span><br><span class="line">git log --merge #仅展示合并的commit</span><br><span class="line">git log --no-merge #不展示合并的commit</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-远程仓库"><a href="#4-远程仓库" class="headerlink" title="4. 远程仓库"></a>4. 远程仓库</h1><p>前面提到的仓库是本地仓库，当多人进行协同开发工作的时候，每个人都在自己的本地仓库维护版本，但是工作需要多人之间共享代码、合并代码，就需要用到远程仓库</p>
+<h2 id="4-1-工作模式"><a href="#4-1-工作模式" class="headerlink" title="4.1 工作模式"></a>4.1 工作模式</h2><p>程序员在本地仓库进行add操作将工作区文件存入暂存区，通过commit操作将暂存区文件存入分支，形成一个版本。<br>然后通过<code>clone</code>,<code>push</code>,<code>pull</code>操作与远程仓库进行交互</p>
+<ul>
+<li>常见的远程仓库是<strong>github和gitee</strong></li>
+<li>一些企业也会有自己的远程仓库</li>
+</ul>
+<h2 id="4-2-基础操作"><a href="#4-2-基础操作" class="headerlink" title="4.2 基础操作"></a>4.2 基础操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 当前仓库名</span></span><br><span class="line">git remote </span><br><span class="line"></span><br><span class="line"><span class="comment">#本地关联远程仓库</span></span><br><span class="line">git remote add origin https://gitee.com/Username/case.git</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看远程仓库地址</span></span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line">git remote show origin</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用prune参数刷新本地分支仓库</span></span><br><span class="line">git remote prune origin</span><br><span class="line"></span><br><span class="line">git remote rename &lt;old name&gt; &lt;new name&gt;</span><br><span class="line"></span><br><span class="line">git remote remove &lt;remote_name&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-3-推送-克隆-拉取"><a href="#4-3-推送-克隆-拉取" class="headerlink" title="4.3 推送 克隆 拉取"></a>4.3 推送 克隆 拉取</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br><span class="line"></span><br><span class="line">git <span class="built_in">clone</span> https://gitee.com/username/case.git </span><br><span class="line"></span><br><span class="line">git <span class="built_in">clone</span> https://gitee.com/username/case.git .</span><br><span class="line"><span class="comment"># 有 . 在末尾，及克隆到当前目录，最好保证是一个空目录</span></span><br><span class="line"></span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单一分支的时候可以省略后面的参数</span></span><br><span class="line">git push</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>git remote add &lt;标识&gt; 远程仓库地址</code></td>
+<td>本地仓库关联远程仓库</td>
+</tr>
+<tr>
+<td><code>git push &lt;标识&gt; master</code></td>
+<td>将本地仓库上传到远程仓库的master分支</td>
+</tr>
+<tr>
+<td><code>git pull &lt;标识&gt; master</code></td>
+<td>从远程仓库master分支拉取到本地仓库</td>
+</tr>
+<tr>
+<td><code>git clone 地址</code></td>
+<td>将远程仓库复制到本地，并形成本地仓库</td>
+</tr>
+</tbody></table>
+<h2 id="4-4-同步"><a href="#4-4-同步" class="headerlink" title="4.4 同步"></a>4.4 同步</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git fetch</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">拉取远程全部分支，包括这些分支的仓库版本和日志记录</span></span><br></pre></td></tr></table></figure>
+<p>在进行PR操作前，需要与远程仓库的最新进展进行同步，就可以使用fetch。<br>该操作比较适用于本地仓库有多个远程仓库，通过<code>remote</code>查看。<br>例如fork一个主要仓库，在自己的仓库修改后，想要提交一个PR合入到主要仓库。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote add upstream &lt;仓库地址&gt;</span><br><span class="line"></span><br><span class="line">git fetch upstream <span class="comment"># 拉取upstream仓库的更新</span></span><br><span class="line"></span><br><span class="line">git pull upstream master</span><br><span class="line"></span><br><span class="line">git push origin feature</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-5-Github"><a href="#4-5-Github" class="headerlink" title="4.5 Github"></a>4.5 Github</h2><p>想要直接与Github仓库进行交互使用，可以通过SSH对github仓库进行访问和写入数据。<br>SSH连接需要使用密钥进行身份验证，也就需要在本地电脑上生成SSH密钥并把公钥添加到github账户中。<br>详细操作可以直接参考<a href="https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key">github的文档</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>测试与github的连接</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>github相关内容不是本篇博客重点，点到为止。更多问题可以直接搜索关键字github ssh</p>
+<h1 id="5-分支"><a href="#5-分支" class="headerlink" title="5. 分支"></a>5. 分支</h1><h2 id="5-1-分支简介"><a href="#5-1-分支简介" class="headerlink" title="5.1 分支简介"></a>5.1 分支简介</h2><p>分支，是一个个版本存储的最终位置；<br>一个分支相当于一条时间线，每一次commit都会形成一个版本，一个个版本依次存储在分支的一个个提交点上，分支上有个指针默认指向最新的提交点。</p>
+<h2 id="5-2-分支的操作"><a href="#5-2-分支的操作" class="headerlink" title="5.2 分支的操作"></a>5.2 分支的操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#查看分支</span></span><br><span class="line">git branch</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看所有分支</span></span><br><span class="line">git branch -a <span class="comment"># 包括远程</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建分支</span></span><br><span class="line">git branch dev <span class="comment">#创建名为dev的分支，只会创建，不会切换</span></span><br><span class="line">git checkout -b dev <span class="comment">#创建dev分支</span></span><br><span class="line"></span><br><span class="line">git checkout -b previous upstream/previous</span><br><span class="line"><span class="comment"># 基于远程仓库upstream/previous创建previous分支</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#切换分支</span></span><br><span class="line">git checkout dev</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除本地分支</span></span><br><span class="line">git branch -D &lt;branch_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除远程分支</span></span><br><span class="line">git push origin --delete &lt;remote_branch_name&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看分支的差异<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git diff A B filename</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看filename文件在分支A和分支B的差异</span></span><br><span class="line"></span><br><span class="line">gitk --all</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">会唤起一个图形化浏览器展示commit</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="5-2-1-分支的细节原理"><a href="#5-2-1-分支的细节原理" class="headerlink" title="5.2.1 分支的细节原理"></a>5.2.1 分支的细节原理</h3><h3 id="5-2-2-分支切换时，保存当前工作"><a href="#5-2-2-分支切换时，保存当前工作" class="headerlink" title="5.2.2 分支切换时，保存当前工作"></a>5.2.2 分支切换时，保存当前工作</h3><p>如果修改了文件，是不可能直接切换到其他分支，是git为了防止丢失当前工作区的内容<br>使用命令<code>git stash</code>保存状态</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">保存当前工作状态</span></span><br><span class="line">git stash</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看存储的工作状态</span></span><br><span class="line">git stash list</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在其他分支完成工作后，切换为刚刚的分支，可以恢复状态</span></span><br><span class="line">git stash pop # 将list也删除了</span><br><span class="line">git stash apply # 不删除list，默认恢复第一个</span><br><span class="line">git stash apply list_name # 恢复指定的list</span><br><span class="line"></span><br><span class="line">git stash drop list_name</span><br><span class="line">git stash clear</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看新保存的stash和当前目录的差异</span></span><br><span class="line">git stash show</span><br></pre></td></tr></table></figure>
+
+<p>该命令是解决git不提交代码不能切换分支的问题，有时候并不一定需要把代码push到远程</p>
+<h2 id="5-3-分支合并"><a href="#5-3-分支合并" class="headerlink" title="5.3 分支合并"></a>5.3 分支合并</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">分支合并</span></span><br><span class="line">git merge branchB</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">当前的分支是A，上面的命令是在A分支下合并分支B</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">强制合并分支</span></span><br><span class="line">git merge branchB --allow-unrelated-histories</span><br></pre></td></tr></table></figure>
+<p>合并原理：</p>
+<ol>
+<li>快速合并： 如果分支B的基于分支A的修改，则仅仅只是合并分支B的新内容，相当于移动指针到分支B的最新提交点；</li>
+<li>三方合并： 两个分支都有修改，则累加修改在一起，形成一个全新的提交点，作为合并后分支的指针位置<blockquote>
+<p>可能会造成冲突</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="5-3-1-冲突"><a href="#5-3-1-冲突" class="headerlink" title="5.3.1 冲突"></a>5.3.1 冲突</h3><p>当两个分支对同一个文件进行了修改，会出现冲突，冲突后，git会将冲突的内容都展示在文件中，用<code>&lt;&lt;&lt;&lt; ==== &gt;&gt;&gt;&gt;</code>来进行隔开</p>
+<h3 id="5-3-2-别的分支修改转移到当前分支"><a href="#5-3-2-别的分支修改转移到当前分支" class="headerlink" title="5.3.2 别的分支修改转移到当前分支"></a>5.3.2 别的分支修改转移到当前分支</h3><p>将A分支的某一修改，合并到当前的B分支</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git checkout branch_A</span><br><span class="line"></span><br><span class="line">git log</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看需要合并的分支A的具体commit</span></span><br><span class="line"></span><br><span class="line">git checkout branch_B</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">切换到合并的分支</span></span><br><span class="line"></span><br><span class="line">git cherry-pick &lt;commit_hash_id&gt;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">合并具体的commit</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-3-3-预览合并的冲突"><a href="#5-3-3-预览合并的冲突" class="headerlink" title="5.3.3 预览合并的冲突"></a>5.3.3 预览合并的冲突</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git checkout main</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">模拟合并</span></span><br><span class="line">git merge --no-commit dev</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">取消合并</span></span><br><span class="line">git merge --abort</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">解决冲突，继续合并</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;merge&quot;</span><br></pre></td></tr></table></figure>
+<p>vscode中进行冲突的管理<br>vscode在发现合并带来的冲突时候，会把更改分为两类，一种是合并更改，一种是暂存更改，暂存更改的意思是来自于合并的分支，但是没有造成冲突，而合并更改中，就是合并的分支和当前的分支产生了冲突，需要人为去管理</p>
+<h2 id="5-4-恢复删除"><a href="#5-4-恢复删除" class="headerlink" title="5.4 恢复删除"></a>5.4 恢复删除</h2><blockquote>
+<p>起因，错误删除了远程原仓库中的文件，并在本地修改后提交到了自己的仓库，随后发起了pull request，需要恢复这个删除的文件。<br>可以直接复制原本的内容，然后创建新的文件，但是也可以利用其他方法</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git fetch # 拉取所有远程仓库为最新</span><br><span class="line">git fetch upstream</span><br><span class="line"></span><br><span class="line">git pull upstream main # 但是被删除的commit还是存在，不会直接恢复</span><br><span class="line"></span><br><span class="line">git checkout &lt;branch-name&gt;  -- &lt;file-name&gt;</span><br><span class="line"></span><br><span class="line">git checkout upstream/main -- &quot;Reports/season 3/successfulbarrier/[WeeklyReport]2024.07.15~2024.07.28.md&quot;</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;Restore deleted files from remote repository&quot;</span><br></pre></td></tr></table></figure>
+
+<h1 id="6-进阶操作"><a href="#6-进阶操作" class="headerlink" title="6. 进阶操作"></a>6. 进阶操作</h1><h2 id="6-1-回滚仓库代码"><a href="#6-1-回滚仓库代码" class="headerlink" title="6.1 回滚仓库代码"></a>6.1 回滚仓库代码</h2><ul>
+<li>常规回滚操作<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看提交日志</span></span><br><span class="line">git <span class="built_in">log</span></span><br><span class="line"><span class="comment"># 在日志中找到需要回滚到的一次提交的id</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#  --hard  一切全部恢复，add的暂存区消失，代码全部恢复到以前状态</span></span><br><span class="line">git reset --hard &lt;<span class="built_in">hash</span> <span class="built_in">id</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">#  --soft  仅仅恢复头指针，已经add的暂存区以及工作空间所有东西都不变</span></span><br><span class="line">git reset --soft &lt;<span class="built_in">hash</span> <span class="built_in">id</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">#  --mixed  头指针移动，add暂存区消失，工作空间代码不变</span></span><br><span class="line">git reset --mixed &lt;<span class="built_in">hash</span> <span class="built_in">id</span>&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ul>
+<li><p>利用<code>HEAD</code>来回滚仓库版本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># HEAD 指向当前仓库，是头指针</span></span><br><span class="line"></span><br><span class="line">git reset --hard HEAD^</span><br><span class="line"><span class="comment"># ^代表上一次提交的版本</span></span><br><span class="line"></span><br><span class="line">git reset --hard HEAD~3</span><br><span class="line"><span class="comment"># ~3以当前版本为基数，回滚几次； ~1表示回滚1次，同^； 这个表示回滚3次</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>回滚某一文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span> filename</span><br><span class="line"></span><br><span class="line">git reset &lt;<span class="built_in">hash</span> <span class="built_in">id</span>&gt; filename</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="6-2-Github使用"><a href="#6-2-Github使用" class="headerlink" title="6.2 Github使用"></a>6.2 Github使用</h2><p>[[Github]]（这个博客还在写，准备写一些开发中常用到的功能）</p>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>遇到拒绝访问<br>可能是token过期了，需要重新生成一个token，并且记得给token权限</p>
+<p>默认的github端口是22，更换端口为443</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">	HostName ssh.github.com</span><br><span class="line">	Port <span class="number">443</span></span><br></pre></td></tr></table></figure>
+<h2 id="6-3-子模块"><a href="#6-3-子模块" class="headerlink" title="6.3 子模块"></a>6.3 子模块</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git submodule add address</span><br><span class="line"></span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br></pre></td></tr></table></figure>
+<h2 id="6-4-新增分支操作"><a href="#6-4-新增分支操作" class="headerlink" title="6.4 新增分支操作"></a>6.4 新增分支操作</h2><p>适用于git 2.23之后版本，新增<code>switch</code>和<code>restore</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git switch dev</span><br><span class="line"></span><br><span class="line">git switch -b dev # 合并</span><br><span class="line">git switch -c dev # 创建</span><br><span class="line"></span><br><span class="line">git restore filename # 撤销提交修改，会从缓存区删除</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="6-5-Git本地服务器"><a href="#6-5-Git本地服务器" class="headerlink" title="6.5 Git本地服务器"></a>6.5 Git本地服务器</h2><blockquote>
+<p>以linux下为例</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install git</span><br><span class="line"></span><br><span class="line">git adduser git</span><br><span class="line"></span><br><span class="line">su git</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C &quot;email@example.com&quot;</span><br><span class="line"></span><br><span class="line">cd ~</span><br><span class="line">cd .ssh</span><br><span class="line"></span><br><span class="line">touch authorized_keys</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">存放他人的公钥，存放后该服务器对公钥的用户开启权限，免密登录，拥有推送拉取权</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="6-6-忽略-gitignore"><a href="#6-6-忽略-gitignore" class="headerlink" title="6.6 忽略 .gitignore"></a>6.6 忽略 .gitignore</h2><p>忽略一些文件或者文件夹<br>在仓库中右键git bash here</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">touch .gitignore</span><br></pre></td></tr></table></figure>
+<p>编辑文件<code>.gitignore</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">dir/       // 忽略dir文件夹</span><br><span class="line">dir/*.txt  //忽略dir目录下所有.txt文件</span><br><span class="line">           //并不会忽略 dir/dir2/a.txt这类文件</span><br><span class="line">*.py       //忽略所有.py文件</span><br><span class="line"></span><br><span class="line">*.gz       //忽略所有.gz结尾文件</span><br><span class="line">!hhh.gz    // hhh.gz文件除外</span><br><span class="line"></span><br><span class="line">abc        //忽略abc文件</span><br><span class="line"></span><br><span class="line">/todo      //忽略根目录的todo文件</span><br><span class="line"></span><br><span class="line">**/__pycache__/</span><br></pre></td></tr></table></figure>
+<p>再次<code>git status</code>就发现忽略的文件，没了</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git status --ignored</span><br></pre></td></tr></table></figure>
+
+<p>.gitignore对已经追踪的文件是无效的，所以需要线清除一下相关缓存状态</p>
+<h3 id="忽略失败"><a href="#忽略失败" class="headerlink" title="忽略失败"></a>忽略失败</h3><p>.gitignore 文件只是 ignore 没有被 staged(cached) 文件，对于已经被 staged 的文件，加入 ignore 文件时一定要先从 staged 移除。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git rm --cached &lt;file&gt;</span><br><span class="line">git rm --cached .obsidian/workspace.json</span><br><span class="line">git rm -r --cached .obsidian   # 忽略文件夹</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用-r参数递归忽略整个文件夹</span></span><br><span class="line"></span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;ignore workspace.json&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-7-规则"><a href="#6-7-规则" class="headerlink" title="6.7 规则"></a>6.7 规则</h2><p>在<code>.git/hooks/</code>下添加文件<code>pre-commit</code>或者<code>pre-commit.sh</code> 如果是linux还需要赋予该文件执行权限。<br>然后在文件中写下脚本，用来判断一些文件的存储规则：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">CURRENT_DIR=$(<span class="built_in">pwd</span>)</span><br><span class="line">HOOK_DIR=$(<span class="built_in">dirname</span> <span class="string">&quot;<span class="variable">$0</span>&quot;</span>)</span><br><span class="line"><span class="built_in">cd</span> <span class="string">&quot;<span class="variable">$HOOK_DIR</span>/../../..&quot;</span> || <span class="built_in">exit</span> 1</span><br><span class="line"></span><br><span class="line">FILES_TO_COMMIT=$(git diff --cached --name-only --diff-filter=ACM)</span><br><span class="line"></span><br><span class="line">INVALID_FILES=<span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">for</span> FILE <span class="keyword">in</span> <span class="variable">$FILES_TO_COMMIT</span>; <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">if</span> [[ <span class="string">&quot;<span class="variable">$FILE</span>&quot;</span> =~ \.(png|jpg|jpeg|gif)$ ]]; <span class="keyword">then</span></span><br><span class="line">        <span class="keyword">if</span> [[ ! <span class="string">&quot;<span class="variable">$FILE</span>&quot;</span> =~ ^z_LinkSource(/|$) ]]; <span class="keyword">then</span></span><br><span class="line">            INVALID_FILES=<span class="string">&quot;<span class="variable">$INVALID_FILES</span> <span class="variable">$FILE</span>&quot;</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">&quot;<span class="variable">$INVALID_FILES</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;ERROR:Image files must be stored in the z_LinkSource/ directory or its subdirectories.\n The following files need to be moved to the correct directory before committing:&quot;</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$INVALID_FILES</span>&quot;</span></span><br><span class="line">    <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Pre-commit Checking Passed!&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Developers&#39;Tool</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>CLI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pip与Conda</title>
+    <url>/mikhayeeer.github.io/2024/10/08/Pip%E4%B8%8EConda/</url>
+    <content><![CDATA[<p>@[TOC]</p>
+<p>python的包管理工具一般是<code>pip</code>和<code>conda</code></p>
+<p><code>pip</code>和<code>conda</code>是Python开发环境中广泛使用的两大包管理工具。<br><code>conda</code>是Anaconda发行版的一部分，但也可以单独安装使用，适用于所有Python环境，不仅仅是Anaconda用户。</p>
+<p>这个博客是平时的笔记的一次整合，至于为什么连这些都有笔记，那只能是：<br><img src="https://img-blog.csdnimg.cn/direct/60377e8da5dd41cbb8f7707887678052.jpeg#pic_center" alt="前面忘了，中间忘了，后面也忘了"></p>
+<p>为了更好展现使用方法，就不分为<code>pip</code>和<code>conda</code>两部分展示。<br>而是<strong>依照使用</strong>进行区分展示。</p>
+<hr>
+<h2 id="0-获取帮助页面"><a href="#0-获取帮助页面" class="headerlink" title="0. 获取帮助页面"></a>0. 获取帮助页面</h2><p>对于任何命令行工具，查阅其帮助文档通常是快速熟悉和掌握其用法的有效途径。<br><code>pip</code>和<code>conda</code>可分别通过以下命令访问其帮助页面：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip <span class="built_in">help</span></span><br><span class="line">pip --<span class="built_in">help</span></span><br><span class="line"><span class="comment"># pip可以通过两种来获取帮助</span></span><br><span class="line"></span><br><span class="line">conda --<span class="built_in">help</span></span><br><span class="line"><span class="comment"># conda只能--help</span></span><br></pre></td></tr></table></figure>
+<p>非常推荐在日常使用中去随时查看help文档</p>
+<hr>
+<h2 id="1-基础操作"><a href="#1-基础操作" class="headerlink" title="1. 基础操作"></a>1. 基础操作</h2><h3 id="安装包"><a href="#安装包" class="headerlink" title="安装包"></a>安装包</h3><p>安装包的基本命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install &lt;package_name&gt;</span><br><span class="line"></span><br><span class="line">conda install &lt;package_name&gt;</span><br></pre></td></tr></table></figure>
+<p>指定特定版本安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install numpy==1.21.5</span><br><span class="line"></span><br><span class="line">conda install numpy=1.21.5</span><br></pre></td></tr></table></figure>
+
+<h4 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h4><ul>
+<li><p>pip<br>更换<code>pip</code>的默认源以加速下载，如使用清华大学镜像：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+<p>使用<code>-i</code>的方法是临时性的，并不是永久的</p>
+</li>
+<li><p>conda<br>conda换源和切换至特定通道安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda install numpy -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line"></span><br><span class="line">conda install conda-pack -c conda-forge</span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p><strong>注</strong>：“源”（<code>pip</code>中的<code>--index-url</code>或<code>-i</code>选项）与“通道”（<code>conda</code>中的<code>-c</code>或<code>--channel</code>选项）尽管在功能上都是指代软件包的来源，但它们分别对应于<code>pip</code>与<code>conda</code>各自独立的服务体系（PyPI与Anaconda Cloud）及其特有的命令行参数。</p>
+</blockquote>
+<h4 id="国内镜像源"><a href="#国内镜像源" class="headerlink" title="国内镜像源"></a>国内镜像源</h4><p>同时，在指定源进行安装的时候，为了避免一些安全性问题，建议选择常规可信源进行安装。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>一些常见的源</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>清华：</td>
+<td><a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></td>
+</tr>
+<tr>
+<td>阿里云</td>
+<td><a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a></td>
+</tr>
+<tr>
+<td>中科大</td>
+<td><a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a></td>
+</tr>
+<tr>
+<td>豆瓣</td>
+<td><a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a></td>
+</tr>
+</tbody></table>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><h2 id="更新单个包：更新所有已安装包：-卸载-查看查看单一包的详情查看所有已安装的包"><a href="#更新单个包：更新所有已安装包：-卸载-查看查看单一包的详情查看所有已安装的包" class="headerlink" title="更新单个包：更新所有已安装包：### 卸载### 查看查看单一包的详情查看所有已安装的包"></a>更新单个包：<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install --upgrade &lt;package_name&gt;</span><br><span class="line"></span><br><span class="line">conda update &lt;package_name&gt;</span><br></pre></td></tr></table></figure><br>更新所有已安装包：<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install --upgrade --all</span><br><span class="line"></span><br><span class="line">conda update --all</span><br></pre></td></tr></table></figure><br>### 卸载<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip uninstall &lt;package_name&gt;</span><br><span class="line"></span><br><span class="line">conda remove &lt;package_name&gt;</span><br></pre></td></tr></table></figure><br>### 查看<br>查看单一包的详情<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip show &lt;package_name&gt;</span><br><span class="line"></span><br><span class="line">conda list &lt;package_name&gt;</span><br></pre></td></tr></table></figure><br>查看所有已安装的包<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip list</span><br><span class="line"></span><br><span class="line">conda list</span><br></pre></td></tr></table></figure></h2><h2 id="2-requirements"><a href="#2-requirements" class="headerlink" title="2. requirements"></a>2. requirements</h2><h3 id="依据requirements-txt安装"><a href="#依据requirements-txt安装" class="headerlink" title="依据requirements.txt安装"></a>依据requirements.txt安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br><span class="line">pip install --requirement requirements.txt</span><br><span class="line"></span><br><span class="line">conda install --<span class="built_in">yes</span> --file requirements.txt</span><br><span class="line">conda install -y -f requirements.txt</span><br></pre></td></tr></table></figure>
+<h3 id="生成requirements-txt"><a href="#生成requirements-txt" class="headerlink" title="生成requirements.txt"></a>生成requirements.txt</h3><p>使用<code>pip</code>自带功能生成：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br><span class="line"><span class="comment"># 自带的功能，会把所有包都生成出来</span></span><br></pre></td></tr></table></figure>
+<p><strong>使用第三方工具<code>pipreqs</code>生成：</strong>(推荐)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install pipreqs</span><br><span class="line"></span><br><span class="line">pipreqs . </span><br><span class="line"><span class="comment"># 对当前路径下的文件进行requirements生成</span></span><br><span class="line">pipreqs . --encoding=utf8</span><br><span class="line"><span class="comment"># 加上这个避免一些编码错误</span></span><br></pre></td></tr></table></figure>
+
+<p><a id="RecommendPipreqs"></a></p>
+<h3 id="freeze和pipreqs的差别"><a href="#freeze和pipreqs的差别" class="headerlink" title="freeze和pipreqs的差别"></a>freeze和pipreqs的差别</h3><p><code>pip freeze</code> 用于列出当前 Python 环境中<strong>所有已安装包及其版本</strong>。<br>执行此命令时，它不分项目边界，一视同仁地捕捉环境中所有的软件包，无论这些包是否直接服务于当前项目。<br>也导致生成的 <code>requirements.txt</code> 文件可能<strong>包含大量非项目必需的依赖</strong>，提供的是全局环境快照，依赖列表过于宽泛。</p>
+<p><code>pipreqs</code> 是一款专门<strong>针对项目</strong>代码进行依赖分析的工具。<br>它通过静态解析项目目录下的源代码和相关文件（如 <code>.py</code>, <code>.ipynb</code>, <code>.yaml</code> 等），识别出项目实际引用的库。<br>基于这种精准分析，生成的 <code>requirements.txt</code> 文件<strong>仅包含项目实际使用的依赖</strong>，剔除了无关包。所以通常更推荐使用 <code>pipreqs</code>。</p>
+<hr>
+<h2 id="3-conda环境"><a href="#3-conda环境" class="headerlink" title="3. conda环境"></a>3. conda环境</h2><ul>
+<li>创建<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda create -n New_env python=3.7</span><br><span class="line">conda create --name New_env python=3.7</span><br></pre></td></tr></table></figure></li>
+<li>重命名env<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda create --name conda-new --<span class="built_in">clone</span> conda-old</span><br><span class="line"><span class="comment"># 通过克隆进行重命名</span></span><br></pre></td></tr></table></figure></li>
+<li>查看环境<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda <span class="built_in">env</span> list</span><br><span class="line">conda info --envs</span><br></pre></td></tr></table></figure></li>
+<li>激活与退出<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda activate &lt;env_name&gt;</span><br><span class="line"></span><br><span class="line">conda deactivate</span><br></pre></td></tr></table></figure></li>
+<li>删除环境<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda <span class="built_in">env</span> remove --name &lt;env_name&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="环境迁移"><a href="#环境迁移" class="headerlink" title="环境迁移"></a>环境迁移</h3><ul>
+<li><p>Export环境配置进行迁移</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 导出环境配置</span></span><br><span class="line">conda <span class="built_in">env</span> <span class="built_in">export</span> &gt; enviroment.yml</span><br><span class="line"><span class="comment"># 依据环境配置创建环境</span></span><br><span class="line">conda <span class="built_in">env</span> create -f enviroment.yml</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打包环境进行迁移</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda install conda-pack -c conda-forge</span><br><span class="line"><span class="comment"># 从通道conda-forge安装conda-pack工具</span></span><br><span class="line"></span><br><span class="line">conda pack -n &lt;env_name&gt; -o /path/to/&lt;output_filename&gt;.tar.gz</span><br></pre></td></tr></table></figure>
+<p>eg.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda pack -n mask-rcnn -o /pack_envs/mask-rcnn.tar.gz</span><br><span class="line"><span class="comment"># 将环境存储到路径为&lt;&gt;的文件中</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入打包好的环境<br>将打包文件移动至目标路径，并解压。<br>假设目标路径为<code>$CondaPath/&lt;env_name&gt;</code>，操作如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="variable">$CondaPath</span></span><br><span class="line"><span class="built_in">mkdir</span> &lt;env_name&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;env_name&gt;</span><br><span class="line">tar -xzvf /path/to/&lt;pack_filename&gt;.tar.gz</span><br></pre></td></tr></table></figure>
+<p>激活并验证已导入的环境：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda <span class="built_in">env</span> list</span><br><span class="line">conda activate &lt;env_name&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>注意</strong>：<code>$CondaPath</code>代表conda环境目录，通常位于<code>/root/anaconda/envs</code>（或其他路径），具体位置可通过<code>conda info</code>命令查看。</p>
+<hr>
+<h2 id="更新说明"><a href="#更新说明" class="headerlink" title="更新说明"></a>更新说明</h2><p><strong>2024年4月20日</strong></p>
+<ul>
+<li>补充了freeze和pipreqs的区别，说明为什么更推荐pipreqs。<a href="#RecommendPipreqs">跳转</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Developers&#39;Tool</category>
+      </categories>
+      <tags>
+        <tag>CLI</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
 </search>

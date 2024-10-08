@@ -3,11 +3,11 @@
   <title>MikhayEeer&#39;s Blog</title>
   
   <subtitle>tech otakus save the world</subtitle>
-  <link href="http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/atom.xml" rel="self"/>
+  <link href="http://mikhayeeer.github.io/mikhayeeer.github.io/atom.xml" rel="self"/>
   
-  <link href="http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/"/>
-  <updated>2023-03-06T03:33:40.065Z</updated>
-  <id>http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/</id>
+  <link href="http://mikhayeeer.github.io/mikhayeeer.github.io/"/>
+  <updated>2024-10-08T06:47:37.051Z</updated>
+  <id>http://mikhayeeer.github.io/mikhayeeer.github.io/</id>
   
   <author>
     <name>Danzel</name>
@@ -17,11 +17,68 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Git常用整合宝典</title>
+    <link href="http://mikhayeeer.github.io/mikhayeeer.github.io/2024/10/08/Git%E5%B8%B8%E7%94%A8%E6%95%B4%E5%90%88%E5%AE%9D%E5%85%B8/"/>
+    <id>http://mikhayeeer.github.io/mikhayeeer.github.io/2024/10/08/Git%E5%B8%B8%E7%94%A8%E6%95%B4%E5%90%88%E5%AE%9D%E5%85%B8/</id>
+    <published>2024-10-07T16:00:00.000Z</published>
+    <updated>2024-10-08T06:47:37.051Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;@[TOC]&lt;/p&gt;
+&lt;h1 id=&quot;0-简单认识Git&quot;&gt;&lt;a href=&quot;#0-简单认识Git&quot; class=&quot;headerlink&quot; title=&quot;0. 简单认识Git&quot;&gt;&lt;/a&gt;0. 简单认识Git&lt;/h1&gt;&lt;h2 id=&quot;0-1-起源&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Developers&#39;Tool" scheme="http://mikhayeeer.github.io/mikhayeeer.github.io/categories/Developers-Tool/"/>
+    
+    
+    <category term="Git" scheme="http://mikhayeeer.github.io/mikhayeeer.github.io/tags/Git/"/>
+    
+    <category term="CLI" scheme="http://mikhayeeer.github.io/mikhayeeer.github.io/tags/CLI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pip与Conda</title>
+    <link href="http://mikhayeeer.github.io/mikhayeeer.github.io/2024/10/08/Pip%E4%B8%8EConda/"/>
+    <id>http://mikhayeeer.github.io/mikhayeeer.github.io/2024/10/08/Pip%E4%B8%8EConda/</id>
+    <published>2024-10-07T16:00:00.000Z</published>
+    <updated>2024-10-08T06:47:36.193Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;@[TOC]&lt;/p&gt;
+&lt;p&gt;python的包管理工具一般是&lt;code&gt;pip&lt;/code&gt;和&lt;code&gt;conda&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pip&lt;/code&gt;和&lt;code&gt;conda&lt;/code&gt;是Python开发环境中广泛使用的两大包管理工具。&lt;br&gt;&lt;</summary>
+        
+      
+    
+    
+    
+    <category term="Developers&#39;Tool" scheme="http://mikhayeeer.github.io/mikhayeeer.github.io/categories/Developers-Tool/"/>
+    
+    
+    <category term="CLI" scheme="http://mikhayeeer.github.io/mikhayeeer.github.io/tags/CLI/"/>
+    
+    <category term="Python" scheme="http://mikhayeeer.github.io/mikhayeeer.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Windows Command</title>
-    <link href="http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/2023/03/06/Windows%E5%B8%B8%E7%94%A8CMD%E5%91%BD%E4%BB%A4/"/>
-    <id>http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/2023/03/06/Windows%E5%B8%B8%E7%94%A8CMD%E5%91%BD%E4%BB%A4/</id>
+    <link href="http://mikhayeeer.github.io/mikhayeeer.github.io/2023/03/06/Windows%E5%B8%B8%E7%94%A8CMD%E5%91%BD%E4%BB%A4/"/>
+    <id>http://mikhayeeer.github.io/mikhayeeer.github.io/2023/03/06/Windows%E5%B8%B8%E7%94%A8CMD%E5%91%BD%E4%BB%A4/</id>
     <published>2023-03-06T03:24:14.000Z</published>
-    <updated>2023-03-06T03:33:40.065Z</updated>
+    <updated>2024-10-08T06:47:34.556Z</updated>
     
     
       
@@ -34,19 +91,19 @@
     
     
     
-    <category term="学习" scheme="http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="CLI" scheme="http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/categories/%E5%AD%A6%E4%B9%A0/CLI/"/>
+    <category term="Developers&#39;Tool" scheme="http://mikhayeeer.github.io/mikhayeeer.github.io/categories/Developers-Tool/"/>
     
     
-    <category term="Windows" scheme="http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/tags/Windows/"/>
+    <category term="Windows" scheme="http://mikhayeeer.github.io/mikhayeeer.github.io/tags/Windows/"/>
+    
+    <category term="CLI" scheme="http://mikhayeeer.github.io/mikhayeeer.github.io/tags/CLI/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/2023/03/06/hello-world/"/>
-    <id>http://mikhayeeer.gitee.io/mikhayeeer.gitee.io/2023/03/06/hello-world/</id>
+    <link href="http://mikhayeeer.github.io/mikhayeeer.github.io/2023/03/06/hello-world/"/>
+    <id>http://mikhayeeer.github.io/mikhayeeer.github.io/2023/03/06/hello-world/</id>
     <published>2023-03-06T01:42:06.895Z</published>
     <updated>2023-03-06T01:42:06.895Z</updated>
     
