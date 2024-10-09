@@ -6,7 +6,7 @@
   <link href="http://mikhayeeer.github.io/mikhayeeer.github.io/atom.xml" rel="self"/>
   
   <link href="http://mikhayeeer.github.io/mikhayeeer.github.io/"/>
-  <updated>2024-10-08T06:47:37.051Z</updated>
+  <updated>2024-10-09T10:36:01.949Z</updated>
   <id>http://mikhayeeer.github.io/mikhayeeer.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows Command</title>
+    <link href="http://mikhayeeer.github.io/mikhayeeer.github.io/2024/10/09/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E3%80%90Python%E3%80%91/"/>
+    <id>http://mikhayeeer.github.io/mikhayeeer.github.io/2024/10/09/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E3%80%90Python%E3%80%91/</id>
+    <published>2024-10-08T16:00:00.000Z</published>
+    <updated>2024-10-09T10:36:01.949Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;学习使用python的命令行参数相关库，&lt;br&gt;命令行参数可以用于脚本的参数输入，比如&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="Programming Language" scheme="http://mikhayeeer.github.io/mikhayeeer.github.io/categories/Programming-Language/"/>
+    
+    
+    <category term="Python" scheme="http://mikhayeeer.github.io/mikhayeeer.github.io/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>Git常用整合宝典</title>

@@ -309,4 +309,62 @@
         <tag>Python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Windows Command</title>
+    <url>/mikhayeeer.github.io/2024/10/09/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E3%80%90Python%E3%80%91/</url>
+    <content><![CDATA[<p>学习使用python的命令行参数相关库，<br>命令行参数可以用于脚本的参数输入，比如</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lupdate xxx.cpp -ts xxx.ts</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">qt的lupdate将文件生成一个可翻译的ts文件</span></span><br></pre></td></tr></table></figure>
+<p>在深度学习中，命令行参数也是必须学会的一项，在开始学习之前，我自己知道的有一个自带的sys和一个常用的argparse</p>
+<h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h1><p>命令行参数多用于程序的执行，和一些脚本<br>一般格式是</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python script.py -s ./src --mode auto -v</span><br></pre></td></tr></table></figure>
+<p>其中的<code>script.py</code>是脚本名，<code>-s --mode -v</code>都是命令行选项，剩下的<code>./src auto</code>就是命令行参数</p>
+<h1 id="1-sys-argv"><a href="#1-sys-argv" class="headerlink" title="1. sys.argv"></a>1. sys.argv</h1><blockquote>
+<p>该模块是python内置的模块，sys.argv可以访问所有的命令行参数，返回值是包含所有命令行参数的列表；</p>
+</blockquote>
+<h2 id="1-1-sys-argv"><a href="#1-1-sys-argv" class="headerlink" title="1.1 sys.argv"></a>1.1 sys.argv</h2><p>程序执行时，python从命令行获取到的所有值都存储在sys.argv列表中：<br>第一个元素是sys.argv[0]，存储的脚本的完整路径；<br>第二个元素才是命令输入的第一个参数，即<code>sys.argv[1]</code></p>
+<p>使用该模块，首先导入sys</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br></pre></td></tr></table></figure>
+<p>假如现在有一个脚本，代码是：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;script name: <span class="subst">&#123;sys.argv[<span class="number">0</span>]&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;number of parameters: &#123;&#125;&quot;</span>.<span class="built_in">format</span>( <span class="built_in">len</span>(sys.argv) ))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;parameter: <span class="subst">&#123; <span class="built_in">str</span>(sys.argv) &#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>我们通过命令行输入</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python test.py ./src --mode auto -o ./output/ans.png</span><br></pre></td></tr></table></figure>
+<p>那么我们的参数个数会被认为是5个，因为命令行选项<code>--mode -o</code>也会被当作命令行参数。<br>于是使用<code>getopt</code>模块识别这些命令行选项</p>
+<h2 id="1-2-getopt"><a href="#1-2-getopt" class="headerlink" title="1.2 getopt"></a>1.2 getopt</h2><h3 id="1-2-1-getopt-getopt"><a href="#1-2-1-getopt-getopt" class="headerlink" title="1.2.1 getopt.getopt"></a>1.2.1 getopt.getopt</h3><p>语法格式如下</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">getopt.getopt(args, option, [ , long_option])</span><br><span class="line"><span class="comment"># args：是需要解析的命令行参数列表，一般填写 sys.argv[1:]，也就是抛弃脚本名sys.argv[0]</span></span><br><span class="line"><span class="comment"># options：以字符串格式定义</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-2-参数异常"><a href="#1-2-2-参数异常" class="headerlink" title="1.2.2 参数异常"></a>1.2.2 参数异常</h3><h1 id="2-argparse"><a href="#2-argparse" class="headerlink" title="2. argparse"></a>2. argparse</h1><p>目前实用下来，感觉argparse更加常用，功能也更强大，可读性更强<br>导入库</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> argparse</span><br></pre></td></tr></table></figure>
+<p>具体用法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"></span><br><span class="line">parse = argparse.ArgumentParser()</span><br><span class="line">parse.add_argument(<span class="string">&quot;-s&quot;</span>,<span class="string">&quot;--sourceFolder&quot;</span>, <span class="built_in">help</span>=<span class="string">&quot;...&quot;</span>, default=<span class="string">&quot;./out&quot;</span>, <span class="built_in">type</span>=<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line">args = parser.parse_args()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(args.sourceFolder)</span><br></pre></td></tr></table></figure>
+<p>代码解释：</p>
+<blockquote>
+<p>-h –help参数是内置的帮助参数<br><code>add_argument</code>函数是添加参数的函数，内置的参数有: 参数名&#x2F;简写 参数的描述，参数的帮助文本，参数的default值，参数的类型</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parse.add_argument(<span class="string">&#x27;-i&#x27;</span>,<span class="string">&#x27;--info&#x27;</span>,description = <span class="string">&#x27;this is infomation&#x27;</span>,<span class="built_in">help</span>=<span class="string">&#x27;please enter item\&#x27;s info&#x27;</span>,default=<span class="string">&#x27;none&#x27;</span>,<span class="built_in">type</span>=<span class="built_in">str</span>,)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-更多的参数解析"><a href="#2-2-更多的参数解析" class="headerlink" title="2.2 更多的参数解析"></a>2.2 更多的参数解析</h2><ul>
+<li>name or flags ：选项字符串的名字或者列表，例如 foo 或者 -f, –foo。</li>
+<li>action： 命令行遇到参数时的动作，默认值是 store。</li>
+<li>store_const：表示赋值为const；</li>
+<li>append：将遇到的值存储成列表，也就是如果参数重复则会保存多个值;</li>
+<li>append_const：将参数规范中定义的一个值保存到一个列表；</li>
+<li>count：存储遇到的次数；此外，也可以继承 argparse.Action 自定义参数解析；</li>
+<li>nargs :应该读取的命令行参数个数，可以是具体的数字，或者是?号，当不指定值时对于 Positional argument 使用 default—对于 Optional argument 使用 const；或者是 * 号，表示 0 或多个参数；或者是 + 号表示 1 或多个参数。</li>
+<li>const-action 和 nargs 所需要的常量值。</li>
+<li>default： 不指定参数时的默认值。</li>
+<li>type： 命令行参数应该被转换成的类型。</li>
+<li>choices：参数可允许的值的一个容器。</li>
+<li>required：可选参数是否可以省略 (仅针对可选参数)。</li>
+<li>help：参数的帮助信息，当指定为 argparse.SUPPRESS 时表示不显示该参数的帮助信息.</li>
+<li>metavar：在 usage 说明中的参数名称，对于必选参数默认就是参数名称，对于可选参数默认是全大写的参数名称.</li>
+<li>dest： 解析后的参数名称，默认情况，对于可选参数选取最长的名称，中划线转换为下划线.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parser = argparse.ArgumentParser(description=<span class="string">&#x27;Process some integers.&#x27;</span>)</span><br><span class="line">parser.add_argument(<span class="string">&#x27;-p&#x27;</span>,<span class="string">&#x27;--path&#x27;</span>, <span class="built_in">type</span>=<span class="built_in">str</span>, default=<span class="string">r&quot;F:\MdAI\mdai-src&quot;</span>, </span><br><span class="line">					<span class="built_in">help</span>=<span class="string">&#x27;The path of the repository&#x27;</span>)</span><br><span class="line">parser.add_argument(<span class="string">&#x27;-x&#x27;</span>,<span class="string">&#x27;--extract&#x27;</span>, action=<span class="string">&#x27;store_true&#x27;</span>, </span><br><span class="line">					<span class="built_in">help</span>=<span class="string">&#x27;Extract strings from Py files&#x27;</span>)</span><br><span class="line">parser.add_argument(<span class="string">&#x27;-r&#x27;</span>,<span class="string">&#x27;--replace&#x27;</span>, action=<span class="string">&#x27;store_true&#x27;</span>, </span><br><span class="line">					<span class="built_in">help</span>=<span class="string">&#x27;Replace strings in Py files based on translation file&#x27;</span>)</span><br><span class="line">parser.add_argument(<span class="string">&#x27;-m&#x27;</span>,<span class="string">&#x27;--mode&#x27;</span>, <span class="built_in">type</span>=<span class="built_in">str</span>, default=<span class="string">&#x27;en2zh&#x27;</span>, </span><br><span class="line">					<span class="built_in">help</span>=<span class="string">&#x27;Choose the mode: en2zh or zh2en&#x27;</span>,</span><br><span class="line">					choices=[<span class="string">&#x27;en2zh&#x27;</span>, <span class="string">&#x27;zh2en&#x27;</span>])</span><br><span class="line">args = parser.parse_args()</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Programming Language</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
 </search>
